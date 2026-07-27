@@ -1,244 +1,66 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coventry Boilers Ltd | Gas Safe Boiler Installation & Engineers</title>
-    <meta name="description" content="Local Gas Safe registered boiler specialists in Coventry. Fast combi replacements, repairs, and annual landlord certificates across CV1-CV6.">
-    <!-- Tailwind CSS -->
+    <title>Coventry Boilers Ltd | Boiler Installations & Heating Services</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: { 800: '#0f172a', 900: '#0a0f1d' },
-                        flame: { 500: '#f97316', 600: '#ea580c' }
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased font-sans pb-20 md:pb-0">
+<body class="bg-slate-900 text-slate-100 font-sans antialiased">
 
-    <!-- TOP ANNOUNCEMENT BAR -->
-    <div class="bg-flame-600 text-white text-xs md:text-sm font-semibold py-2 px-4 text-center">
-        <i class="fa-solid fa-fire mr-2"></i> SUMMER SPECIAL: Free Wireless Smart Thermostat & Magnetic Filter with Every New Combi Upgrade
-    </div>
-
-    <!-- HEADER / NAVIGATION -->
-    <header class="sticky top-0 z-40 bg-navy-900/95 backdrop-blur-md text-white border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="bg-flame-500 text-white p-2.5 rounded-lg text-xl font-bold">
-                    <i class="fa-solid fa-temperature-arrow-up"></i>
-                </div>
-                <div>
-                    <span class="text-xl font-extrabold tracking-tight block leading-none">COVENTRY BOILERS</span>
-                    <span class="text-xs text-slate-400 tracking-widest uppercase font-medium">Gas & Heating Specialists</span>
-                </div>
+    <!-- HEADER / HERO SECTION -->
+    <header class="border-b border-slate-800 bg-slate-950 py-6">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <h1 class="text-2xl font-black tracking-tight text-white">COVENTRY BOILERS LTD</h1>
+                <p class="text-xs text-slate-400">Professional Heating & Boiler Solutions</p>
             </div>
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="#services" class="text-sm font-medium hover:text-flame-500 transition">Services</a>
-                <a href="#survey-form" class="text-sm font-medium hover:text-flame-500 transition">Book Survey</a>
-                <a href="#why-us" class="text-sm font-medium hover:text-flame-500 transition">Why Us</a>
-                <a href="tel:02476000000" class="bg-flame-500 hover:bg-flame-600 text-white font-bold px-5 py-2.5 rounded-lg text-sm transition flex items-center space-x-2">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>02476 000 000</span>
+            <div class="flex items-center gap-4">
+                <a href="mailto:info@coventryboilers.co.uk" class="text-sm bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg transition">
+                    Email Us
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="relative bg-navy-900 text-white pt-12 pb-20 overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#f97316_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="max-w-7xl mx-auto px-4 relative z-10 grid md:grid-cols-12 gap-12 items-center">
+    <!-- MAIN HERO CONTENT -->
+    <main class="max-w-5xl mx-auto px-6 py-16">
+        <div class="text-center max-w-2xl mx-auto space-y-6">
+            <h2 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+                Reliable Boiler Installations Across Coventry & Warwickshire
+            </h2>
+            <p class="text-lg text-slate-300">
+                Upgrading your heating system has never been straightforward. Quality workmanship, transparent pricing, and fully compliant installations.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="mailto:info@coventryboilers.co.uk" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl transition shadow-lg">
+                    Get a Quote
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER LEGAL & CONTACT SECTION -->
+    <footer class="border-t border-slate-800 bg-slate-950 py-12 mt-20">
+        <div class="max-w-5xl mx-auto px-6 space-y-4">
+            <p class="font-bold text-white text-base">COVENTRY BOILERS LTD</p>
             
-            <div class="md:col-span-7 space-y-6">
-                <div class="inline-flex items-center space-x-2 bg-slate-800/80 border border-slate-700 px-3.5 py-1.5 rounded-full text-xs text-flame-500 font-semibold">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <span>Gas Safe Registered Engineers | Coventry & Warwickshire</span>
-                </div>
-                <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight">
-                    Expert Boiler Installation & Repairs With Up To <span class="text-flame-500">12-Year Warranties</span>
-                </h1>
-                <p class="text-slate-300 text-lg md:text-xl font-normal leading-relaxed">
-                    Fast, clean combi boiler replacements, repairs, and servicing across Coventry. Free in-person home surveys—fixed pricing with zero hidden surprises.
-                </p>
-                
-                <div class="pt-2 grid grid-cols-2 gap-4 text-sm font-medium text-slate-300">
-                    <div class="flex items-center space-x-2">
-                        <i class="fa-solid fa-circle-check text-flame-500"></i>
-                        <span>Free In-Person Site Surveys</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fa-solid fa-circle-check text-flame-500"></i>
-                        <span>Guaranteed Fixed Price Quotes</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fa-solid fa-circle-check text-flame-500"></i>
-                        <span>Landlord CP12 Safety Checks</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fa-solid fa-circle-check text-flame-500"></i>
-                        <span>Powerflushing & Smart Controls</span>
-                    </div>
-                </div>
+            <p class="text-sm text-slate-300">
+                Registered in England & Wales | Company No. <strong>17347019</strong>
+            </p>
+            
+            <p class="text-xs text-slate-400 leading-relaxed max-w-3xl">
+                Coventry Boilers Ltd manages central heating and boiler installations across Coventry, Bedworth, Nuneaton, and Warwickshire. 
+                All physical gas works, servicing, and CP12 certifications are strictly carried out by independent, fully qualified Gas Safe Registered engineers.
+            </p>
 
-                <div class="pt-4 flex flex-col sm:flex-row gap-4">
-                    <a href="#survey-form" class="bg-flame-500 hover:bg-flame-600 text-white text-center font-bold px-8 py-4 rounded-xl text-lg transition shadow-lg shadow-flame-500/20">
-                        Book Free Engineer Visit <i class="fa-solid fa-arrow-right ml-2"></i>
-                    </a>
-                    <a href="tel:02476000000" class="border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-white text-center font-bold px-8 py-4 rounded-xl text-lg transition flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-phone text-flame-500"></i>
-                        <span>Call 02476 000 000</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- FREE ENGINEER SURVEY WIDGET -->
-            <div id="survey-form" class="md:col-span-5 bg-white text-slate-900 p-6 md:p-8 rounded-2xl shadow-2xl border border-slate-100">
-                <div class="border-b border-slate-100 pb-4 mb-6">
-                    <h3 class="text-xl font-extrabold text-navy-900">Book a Free Local Engineer Survey</h3>
-                    <p class="text-xs text-slate-500 mt-1">No call-out fee. Fixed, accurate quote provided on site by a Gas Safe specialist.</p>
-                </div>
-                
-                <form id="leadForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Full Name</label>
-                        <input type="text" id="fullName" required placeholder="e.g. Mark Johnson" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm font-medium focus:ring-2 focus:ring-flame-500 outline-none">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Phone Number</label>
-                        <input type="tel" id="phoneNumber" required placeholder="07123 456789" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm font-medium focus:ring-2 focus:ring-flame-500 outline-none">
-                    </div>
-                    
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Postcode / Area</label>
-                        <input type="text" id="postcode" required placeholder="e.g. CV3 or Bedworth" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm font-medium focus:ring-2 focus:ring-flame-500 outline-none">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Service Required</label>
-                        <select id="serviceType" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-sm font-medium focus:ring-2 focus:ring-flame-500 outline-none">
-                            <option value="survey">Free Home Survey for New Boiler</option>
-                            <option value="breakdown">Boiler Repair / Breakdown</option>
-                            <option value="service">Annual Boiler Service / CP12</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="w-full bg-navy-900 hover:bg-slate-800 text-white font-bold p-4 rounded-xl text-base transition flex justify-center items-center space-x-2">
-                        <span>Request Engineer Visit</span>
-                        <i class="fa-solid fa-calendar-check text-flame-500"></i>
-                    </button>
-                    <p class="text-[10px] text-center text-slate-400 mt-2">100% Free. No pressure sales. We respect your privacy.</p>
-                </form>
-
-                <div id="thankYouMessage" class="hidden mt-4 p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-center">
-                    <i class="fa-solid fa-circle-check text-emerald-600 text-3xl mb-2"></i>
-                    <p class="text-sm font-bold text-slate-800">Survey Request Received!</p>
-                    <p class="text-xs text-slate-600 mt-1">We will give you a quick call shortly to lock in a convenient survey time.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- BRAND TRUST BAR -->
-    <section id="why-us" class="bg-slate-100 border-y border-slate-200 py-6">
-        <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-around items-center gap-6 opacity-75 text-center">
-            <span class="font-extrabold text-slate-700 text-sm tracking-wider uppercase"><i class="fa-solid fa-shield text-flame-500 mr-2"></i>Gas Safe Registered</span>
-            <span class="font-extrabold text-slate-700 text-sm tracking-wider uppercase"><i class="fa-solid fa-award text-flame-500 mr-2"></i>Worcester Bosch Accredited</span>
-            <span class="font-extrabold text-slate-700 text-sm tracking-wider uppercase"><i class="fa-solid fa-check-double text-flame-500 mr-2"></i>Ideal Heating Approved</span>
-            <span class="font-extrabold text-slate-700 text-sm tracking-wider uppercase"><i class="fa-solid fa-star text-flame-500 mr-2"></i>5-Star Rated Local</span>
-        </div>
-    </section>
-
-    <!-- CORE SERVICES -->
-    <section id="services" class="py-16 max-w-7xl mx-auto px-4">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-            <h2 class="text-3xl font-black text-navy-900 tracking-tight">Our Core Heating Services</h2>
-            <p class="text-slate-600 text-sm mt-2">Professional gas and heating engineering delivered by qualified local tradesmen.</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
-                <div class="w-12 h-12 bg-orange-100 text-flame-500 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
-                    <i class="fa-solid fa-dumpster-fire"></i>
-                </div>
-                <h3 class="text-xl font-bold text-navy-900 mb-2">Combi Boiler Upgrades</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                    Swap your old, inefficient boiler for a modern A-rated high-efficiency combi system. Save significantly on energy bills with warranties up to 12 years.
-                </p>
-                <span class="text-xs font-bold text-flame-500 uppercase tracking-wider">Free On-Site Survey</span>
-            </div>
-
-            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
-                <div class="w-12 h-12 bg-orange-100 text-flame-500 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
-                    <i class="fa-solid fa-wrench"></i>
-                </div>
-                <h3 class="text-xl font-bold text-navy-900 mb-2">Diagnostics & Repairs</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                    Fast fault-finding for boiler breakdowns, pressure loss, strange noises, or no hot water across Coventry & Nuneaton.
-                </p>
-                <span class="text-xs font-bold text-flame-500 uppercase tracking-wider">Fixed Diagnostic Fee</span>
-            </div>
-
-            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
-                <div class="w-12 h-12 bg-orange-100 text-flame-500 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
-                    <i class="fa-solid fa-file-contract"></i>
-                </div>
-                <h3 class="text-xl font-bold text-navy-900 mb-2">Landlord CP12 Certificates</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                    Annual gas safety inspections and servicing for local landlords and property managers. Fast digital certificate issuing.
-                </p>
-                <span class="text-xs font-bold text-flame-500 uppercase tracking-wider">Multi-Property Rates</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER / COMPLIANCE -->
-    <footer class="bg-navy-900 text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-            <div>
-                <span class="text-lg font-bold text-white block mb-1">COVENTRY BOILERS LTD</span>
-                <p class="text-xs text-slate-400 leading-relaxed">
-                    Registered in England & Wales. Company No. [Pending] | Gas Safe Reg No. [Pending]<br>
-                    Providing domestic gas, central heating, and boiler services across Coventry, Bedworth, Nuneaton, and Warwickshire.
-                </p>
-            </div>
-            <div class="text-left md:text-right text-xs space-y-1">
-                <p class="font-semibold text-slate-300">Contact Operations:</p>
-                <p>Email: info@coventryboilers.co.uk</p>
-                <p>Phone: 02476 000 000</p>
+            <div class="pt-4 border-t border-slate-800/60 text-xs text-slate-400 flex flex-col sm:flex-row justify-between gap-2">
+                <p>Contact: <a href="mailto:info@coventryboilers.co.uk" class="underline text-slate-300">info@coventryboilers.co.uk</a></p>
+                <p>&copy; 2026 Coventry Boilers Ltd. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- MOBILE STICKY CALL BAR -->
-    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-navy-900 border-t border-slate-800 p-3 z-50 flex gap-2">
-        <a href="tel:02476000000" class="flex-1 bg-flame-500 hover:bg-flame-600 text-white font-bold py-3 rounded-lg text-center text-sm flex items-center justify-center space-x-2">
-            <i class="fa-solid fa-phone"></i>
-            <span>Call Engineer</span>
-        </a>
-        <a href="#survey-form" class="flex-1 bg-slate-800 text-white font-bold py-3 rounded-lg text-center text-sm flex items-center justify-center space-x-2 border border-slate-700">
-            <i class="fa-solid fa-calendar-check text-flame-500"></i>
-            <span>Book Visit</span>
-        </a>
-    </div>
-
-    <!-- FORM SUBMIT HANDLER -->
-    <script>
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            document.getElementById('leadForm').classList.add('hidden');
-            document.getElementById('thankYouMessage').classList.remove('hidden');
-        }
-    </script>
 </body>
 </html>
