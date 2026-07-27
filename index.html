@@ -3,35 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coventry Boilers Ltd | Specialist Boiler Management & Services</title>
+    <title>Coventry Boilers Ltd | Premier Boiler Installations & Heating Services</title>
     <style>
         :root {
-            --primary: #0056b3;
-            --primary-dark: #003d80;
-            --secondary: #ff6b00;
-            --dark: #111827;
-            --gray: #4b5563;
-            --light: #f9fafb;
-            --white: #ffffff;
+            --primary: #1f2937;       /* Dark Matte Charcoal */
+            --primary-light: #374151; /* Lighter Charcoal */
+            --accent: #f97316;        /* Flame Orange (High Conversion) */
+            --accent-hover: #ea580c;  /* Darker Orange Hover */
+            --light-bg: #f8fafc;     /* Off-White Background */
+            --card-bg: #ffffff;      /* Pure White */
+            --text-dark: #0f172a;    /* Deep Slate */
+            --text-muted: #64748b;   /* Muted Gray */
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
             line-height: 1.6;
-            color: var(--dark);
-            background-color: #f3f4f6;
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+            padding-bottom: 60px; /* Space for mobile sticky CTA */
+        }
+
+        @media (min-width: 769px) {
+            body { padding-bottom: 0; }
         }
 
         /* Top Header */
         header {
-            background: var(--white);
-            border-bottom: 1px solid #e5e7eb;
+            background: var(--card-bg);
+            border-bottom: 1px solid #e2e8f0;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -47,255 +53,320 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--dark);
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--primary);
             text-transform: uppercase;
             letter-spacing: -0.5px;
         }
 
         .logo span {
-            color: var(--primary);
+            color: var(--accent);
         }
 
         .header-contact {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
         }
 
-        .phone-number {
+        .phone-link {
             font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--dark);
+            font-weight: 800;
+            color: var(--primary);
             text-decoration: none;
         }
 
-        .phone-number:hover {
-            color: var(--primary);
-        }
-
-        .btn-header {
-            background: var(--primary);
-            color: var(--white);
+        .btn-accent {
+            background: var(--accent);
+            color: white;
             padding: 10px 18px;
             border-radius: 6px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+
+        .btn-accent:hover {
+            background: var(--accent-hover);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(17,24,39,0.92), rgba(0,61,128,0.85)), url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1600&q=80') center/cover;
-            color: var(--white);
-            padding: 60px 20px 80px 20px;
+            background: linear-gradient(135deg, rgba(15,23,42,0.95), rgba(31,41,55,0.88)), url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1600&q=80') center/cover;
+            color: white;
+            padding: 50px 20px 70px 20px;
         }
 
         .hero-grid {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1fr 450px;
+            grid-template-columns: 1fr 440px;
             gap: 40px;
             align-items: center;
         }
 
         @media (max-width: 900px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-            }
+            .hero-grid { grid-template-columns: 1fr; }
         }
 
         .hero-text h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 20px;
+            font-size: 2.6rem;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 18px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-text h1 span {
+            color: var(--accent);
         }
 
         .hero-text p {
-            font-size: 1.15rem;
-            color: #d1d5db;
-            margin-bottom: 30px;
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            margin-bottom: 25px;
         }
 
         .trust-pills {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 10px;
+            margin-bottom: 25px;
         }
 
         .pill {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 8px 14px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 6px 14px;
             border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #f1f5f9;
         }
 
-        /* Form Card */
+        .area-tag {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+        }
+
+        /* Lead Form Card */
         .form-card {
-            background: var(--white);
-            color: var(--dark);
-            padding: 30px;
+            background: var(--card-bg);
+            color: var(--text-dark);
+            padding: 28px;
             border-radius: 12px;
             box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3);
+            border: 2px solid var(--accent);
         }
 
         .form-card h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 5px;
-            color: var(--dark);
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+            color: var(--primary);
         }
 
         .form-card p {
-            font-size: 0.9rem;
-            color: var(--gray);
-            margin-bottom: 20px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 18px;
         }
 
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 14px;
         }
 
         .form-group label {
             display: block;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            color: var(--primary);
         }
 
-        .form-group input, .form-group select, .form-group textarea {
+        .form-group input, .form-group select {
             width: 100%;
             padding: 12px;
-            border: 1px solid #d1d5db;
+            border: 1px solid #cbd5e1;
             border-radius: 6px;
-            font-size: 1rem;
-            background: #f9fafb;
+            font-size: 0.95rem;
+            background: #f8fafc;
         }
 
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+        .form-group input:focus, .form-group select:focus {
             outline: none;
-            border-color: var(--primary);
-            background: var(--white);
+            border-color: var(--accent);
+            background: #ffffff;
         }
 
         .btn-submit {
             width: 100%;
-            padding: 14px;
-            background: var(--secondary);
-            color: var(--white);
+            padding: 15px;
+            background: var(--accent);
+            color: white;
             border: none;
             border-radius: 6px;
             font-size: 1.1rem;
-            font-weight: 700;
+            font-weight: 800;
             cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             transition: background 0.2s;
+            margin-top: 5px;
         }
 
         .btn-submit:hover {
-            background: #e05d00;
+            background: var(--accent-hover);
         }
 
-        /* Services Section */
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--primary);
+            color: white;
+            padding: 35px 20px;
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 1.8rem;
+            color: var(--accent);
+            font-weight: 900;
+        }
+
+        .stat-item p {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Services Grid */
         .section {
-            padding: 70px 20px;
+            padding: 60px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .section-title h2 {
             font-size: 2rem;
-            font-weight: 800;
-            color: var(--dark);
+            font-weight: 900;
+            color: var(--primary);
         }
 
         .section-title p {
-            color: var(--gray);
-            font-size: 1.05rem;
+            color: var(--text-muted);
+            font-size: 1rem;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
         }
 
         .service-card {
-            background: var(--white);
-            padding: 30px;
+            background: var(--card-bg);
+            padding: 25px;
             border-radius: 10px;
-            border: 1px solid #e5e7eb;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
+            border-top: 4px solid var(--primary);
+        }
+
+        .service-card.highlight {
+            border-top-color: var(--accent);
         }
 
         .service-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 12px;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
             color: var(--primary);
+            font-weight: 800;
         }
 
         .service-card p {
-            color: var(--gray);
-            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-size: 0.92rem;
         }
 
-        /* Why Choose Us Banner */
-        .why-us {
-            background: var(--dark);
-            color: var(--white);
-            padding: 60px 20px;
+        /* Sticky Mobile Footer CTA */
+        .mobile-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--primary);
+            padding: 10px 15px;
+            z-index: 999;
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
         }
 
-        .why-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
+        @media (max-width: 768px) {
+            .mobile-cta {
+                display: flex;
+                gap: 10px;
+            }
+        }
+
+        .mobile-cta a {
+            flex: 1;
             text-align: center;
-        }
-
-        .why-box h3 {
-            font-size: 1.8rem;
-            color: var(--secondary);
-            margin-bottom: 8px;
-        }
-
-        .why-box p {
-            color: #9ca3af;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            text-decoration: none;
             font-size: 0.95rem;
         }
 
-        /* Legal Disclaimer Box */
+        .mobile-call {
+            background: var(--accent);
+            color: white;
+        }
+
+        .mobile-quote {
+            background: var(--primary-light);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* Disclaimer */
         .disclaimer-box {
             text-align: center;
-            padding: 20px;
-            font-size: 0.85rem;
-            color: #6b7280;
+            padding: 25px 20px;
+            font-size: 0.82rem;
+            color: var(--text-muted);
             max-width: 1200px;
             margin: 0 auto;
-            border-top: 1px solid #e5e7eb;
+            border-top: 1px solid #e2e8f0;
         }
 
         /* Footer */
         footer {
-            background: #0b0f19;
-            color: #9ca3af;
-            padding: 30px 20px;
+            background: #0f172a;
+            color: #64748b;
+            padding: 25px 20px;
             text-align: center;
-            font-size: 0.9rem;
-            border-top: 1px solid #1f2937;
+            font-size: 0.88rem;
         }
     </style>
 </head>
@@ -305,8 +376,8 @@
         <div class="nav-container">
             <div class="logo">Coventry <span>Boilers</span></div>
             <div class="header-contact">
-                <a href="tel:02476000000" class="phone-number">📞 Call For Assistance</a>
-                <a href="#quote-form" class="btn-header">Get a Quote</a>
+                <a href="tel:02476000000" class="phone-link">📞 02476 000000</a>
+                <a href="#quote-form" class="btn-accent">Get Quote</a>
             </div>
         </div>
     </header>
@@ -314,28 +385,33 @@
     <section class="hero">
         <div class="hero-grid">
             <div class="hero-text">
-                <h1>Boiler Installation, Repairs & Servicing in Coventry</h1>
-                <p>Fast, reliable heating solutions. All gas-related work is carried out by local, fully vetted Gas Safe registered engineers.</p>
+                <h1>Fixed Price <span>Boiler Upgrades</span> & Fast Local Repairs</h1>
+                <p>Coventry's trusted central heating specialists. Transparent fixed pricing, fast turnaround, and fully guaranteed installations.</p>
                 
                 <div class="trust-pills">
                     <span class="pill">✓ Vetted Gas Safe Engineers</span>
+                    <span class="pill">✓ Fixed Price Quotes</span>
+                    <span class="pill">✓ Up to 10-Yr Warranties</span>
                     <span class="pill">✓ Fully Insured</span>
-                    <span class="pill">✓ No Hidden Costs</span>
-                    <span class="pill">✓ Local Coventry Team</span>
+                </div>
+
+                <div class="area-tag">
+                    📍 <strong>Coverage Area:</strong> Coventry, Kenilworth, Nuneaton, Bedworth & surrounds.
                 </div>
             </div>
 
             <div class="form-card" id="quote-form">
-                <h2>Request a Free Quote</h2>
-                <p>Fill out the form below and we'll contact you shortly.</p>
+                <h2>Get a Fast Estimate</h2>
+                <p>Fill out details below for a free, no-obligation quote.</p>
                 
                 <form action="https://api.web3forms.com/submit" method="POST">
-                    <!-- Your Web3Forms Access Key -->
+                    <!-- Your Web3Forms Key -->
                     <input type="hidden" name="access_key" value="b04ea108-ef73-4877-b3e3-e36462d1bc23">
                     <input type="hidden" name="subject" value="New Lead: Coventry Boilers Site">
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
                     <div class="form-group">
-                        <label for="name">Full Name</label>
+                        <label for="name">Your Name</label>
                         <input type="text" id="name" name="name" required placeholder="John Smith">
                     </div>
 
@@ -346,83 +422,88 @@
 
                     <div class="form-group">
                         <label for="postcode">Postcode</label>
-                        <input type="text" id="postcode" name="postcode" required placeholder="CV1 2AB">
+                        <input type="text" id="postcode" name="postcode" required placeholder="e.g. CV1 2AB">
                     </div>
 
                     <div class="form-group">
                         <label for="service">Required Service</label>
                         <select id="service" name="service">
-                            <option value="New Boiler Installation">New Boiler Installation</option>
+                            <option value="New Boiler Replacement">New Boiler Replacement</option>
                             <option value="Boiler Repair / Breakdown">Boiler Repair / Breakdown</option>
-                            <option value="Annual Servicing">Annual Servicing</option>
-                            <option value="System Powerflush">System Powerflush</option>
-                            <option value="Other Heating Work">Other Heating Work</option>
+                            <option value="Annual Boiler Service">Annual Boiler Service</option>
+                            <option value="Radiators & Smart Controls">Radiators & Smart Controls</option>
                         </select>
                     </div>
 
-                    <button type="submit" class="btn-submit">Get Your Free Quote</button>
+                    <button type="submit" class="btn-submit">Request Quote</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <div class="why-us">
-        <div class="why-grid">
-            <div class="why-box">
+    <div class="stats-bar">
+        <div class="stats-grid">
+            <div class="stat-item">
                 <h3>100%</h3>
-                <p>Certified Gas Safe Partners</p>
+                <p>Gas Safe Partnered</p>
             </div>
-            <div class="why-box">
+            <div class="stat-item">
                 <h3>Fast</h3>
                 <p>Local Response Time</p>
             </div>
-            <div class="why-box">
-                <h3>Clear</h3>
-                <p>Upfront Fixed Pricing</p>
+            <div class="stat-item">
+                <h3>Fixed</h3>
+                <p>Upfront Pricing</p>
             </div>
-            <div class="why-box">
+            <div class="stat-item">
                 <h3>Local</h3>
-                <p>Coventry & Surrounds</p>
+                <p>Coventry Based</p>
             </div>
         </div>
     </div>
 
     <section class="section">
         <div class="section-title">
-            <h2>Our Core Heating Services</h2>
-            <p>Professional heating management for homeowners, landlords, and commercial sites.</p>
+            <h2>Our Heating Services</h2>
+            <p>Professional boiler management for homeowners, landlords, and properties across Coventry.</p>
         </div>
 
         <div class="services-grid">
-            <div class="service-card">
-                <h3>New Boiler Installation</h3>
-                <p>Upgrading your old, inefficient system to a modern energy-efficient combi or system boiler. Saves on energy bills and includes full manufacturer warranties.</p>
+            <div class="service-card highlight">
+                <h3>Boiler Replacement</h3>
+                <p>Upgrade to high-efficiency Worcester Bosch, Vaillant, or Ideal combi boilers. Saves money on energy bills and includes manufacturer warranties.</p>
             </div>
 
             <div class="service-card">
-                <h3>Boiler Repairs & Diagnostics</h3>
-                <p>Fast fault-finding for leaks, low pressure, loss of hot water, or error codes. Carried out by registered engineers carrying common spare parts.</p>
+                <h3>Boiler Repairs & Service</h3>
+                <p>Fast fault diagnostics for pressure loss, leaks, error codes, or heating breakdowns. Carried out by fully vetted local sub-contractors.</p>
             </div>
 
             <div class="service-card">
-                <h3>Annual Boiler Servicing</h3>
-                <p>Keep your warranty valid and your home safe with a thorough annual service, safety check, and flue gas analysis by qualified sub-contractors.</p>
+                <h3>Annual Safety Servicing</h3>
+                <p>Keep your manufacturer warranty valid and ensure safety compliance with a comprehensive annual check and flue analysis.</p>
             </div>
 
             <div class="service-card">
-                <h3>Radiators & Controls</h3>
-                <p>Upgrading old radiators, installing smart thermostats (Nest/Hive), and fitting thermostatic radiator valves (TRVs) for total room control.</p>
+                <h3>Radiators & Smart Controls</h3>
+                <p>Installation of smart thermostats like Nest or Hive, TRV valves, radiator replacements, and full system powerflushing.</p>
             </div>
         </div>
     </section>
 
     <div class="disclaimer-box">
-        <p><strong>Please note:</strong> Coventry Boilers Ltd acts as a central heating project management agency. All gas-related work, including boiler installations, repairs, and servicing, is exclusively performed by independent, Gas Safe registered sub-contractors.</p>
+        <p><strong>Please note:</strong> Coventry Boilers Ltd operates as a central heating project management agency. All gas-related work, including boiler installations, repairs, and servicing, is exclusively carried out by independent, Gas Safe registered sub-contractors.</p>
     </div>
 
     <footer>
         <p>&copy; Coventry Boilers Ltd. Registered in England & Wales.</p>
     </footer>
+
+    <!-- Sticky Bottom Bar for Mobile Devices -->
+    <div class="mobile-cta">
+        <a href="tel:02476000000" class="mobile-call">📞 Call Now</a>
+        <a href="#quote-form" class="mobile-quote">⚡ Get Quote</a>
+    </div>
 
 </body>
 </html>
